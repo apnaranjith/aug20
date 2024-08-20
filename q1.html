@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=prompt("enter the number of sub arrays:");
+main=[];
+for(i=0;i<number;i++){
+    let sub=prompt("enter the values seperated by',':");
+    sub=sub.split(",").map(Number);
+    console.log(sub);
+    main.push(sub);
+    
+}
+console.log(main);
+include=0;
+for(i of main){
+    c=0;
+    for(j=0;j<i.length;j++){
+        if(i[j]>1){
+            if(i[j]%2==0){
+                c++;
+                break;
+            }
+        }
+    }
+    if(c>0){
+        include++;
+    }
+}
+console.log(include);
+    </script>
+    
+</body>
+</html>
